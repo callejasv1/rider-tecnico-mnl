@@ -7,6 +7,7 @@ export interface EquipoPlantilla {
   categoria: string
   anchoCm: number
   altoCm: number
+  fuente?: string
   salidas: SalidaAudio[]
   alimentacion: Alimentacion
 }
