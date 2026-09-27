@@ -199,7 +199,7 @@ export const CATALOGO: Catalogo = {
       categoria: 'Controlador MIDI',
       anchoCm: 55,
       altoCm: 14.7,
-      fuente: 'https://www.arturia.com/products/hybrid-synths/keystep-37',
+      fuente: 'https://downloads.arturia.com/products/keystep-37/manual/keystep-37_Manual_1_0_EN.pdf',
       salidas: [],
       alimentacion: { requiereCorriente: true, tipo: 'USB', enchufe: 'USB' },
     },
