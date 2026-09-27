@@ -4,23 +4,8 @@
   padding: var(--space-6) var(--space-6) var(--space-10);
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  margin-bottom: var(--space-6);
-  padding-bottom: var(--space-4);
-  border-bottom: 1px solid var(--border-strong);
-}
-
-.brand__logo {
-  height: 34px;
-  width: auto;
-}
-
-.brand__tag {
-  color: var(--text-muted);
-  font-size: 13px;
+.seccion {
+  scroll-margin-top: 88px;
 }
 
 .topbar {
@@ -159,5 +144,20 @@
 
   .topbar {
     padding: var(--space-3) var(--space-4);
+  }
+}
+
+@media (max-width: 560px) {
+  .topbar {
+    flex-wrap: wrap;
+  }
+
+  .topbar__actions {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .topbar__actions > button {
+    flex: 1 1 auto;
   }
 }
