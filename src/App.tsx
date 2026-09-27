@@ -1,17 +1,29 @@
-const base = import.meta.env.BASE_URL
+import { BrandHeader } from './components/BrandHeader'
+import { ParticipantForm } from './components/ParticipantForm'
+import { DeviceCatalog } from './components/DeviceCatalog'
+import { MyDevices } from './components/MyDevices'
+import { TableCanvas } from './components/TableCanvas'
+import { SummaryPanel } from './components/SummaryPanel'
+import { ExportBar } from './components/ExportBar'
 
 function App() {
   return (
-    <main className="landing">
-      <img
-        className="landing__logo"
-        src={`${base}logos/logo-mnl-principal.png`}
-        alt="Make Noise Lab"
-      />
-      <h1 className="landing__title">Rider Técnico</h1>
-      <p className="landing__subtitle">Graduación · Make Noise Lab</p>
-      <p className="landing__note">En construcción.</p>
-    </main>
+    <div className="app">
+      <BrandHeader />
+      <ExportBar />
+      <div className="app__layout">
+        <div className="app__col">
+          <ParticipantForm />
+          <DeviceCatalog />
+        </div>
+        <div className="app__col">
+          <TableCanvas />
+          <MyDevices />
+          <SummaryPanel />
+        </div>
+      </div>
+      <footer className="app__footer">Make Noise Lab · Wires &amp; Voltage</footer>
+    </div>
   )
 }
 
