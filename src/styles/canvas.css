@@ -1,0 +1,133 @@
+.table-wrap {
+  padding: var(--space-2) 0;
+  overflow: auto;
+}
+
+.table {
+  position: relative;
+  background-color: var(--surface-1);
+  background-image: linear-gradient(
+      color-mix(in srgb, var(--border-strong) 75%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--border-strong) 75%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: var(--grid-step, 15px) var(--grid-step, 15px);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+}
+
+.table__zone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: var(--space-1);
+  border-right: 1px dashed var(--border-strong);
+}
+
+.table__zone--a {
+  left: 0;
+}
+
+.table__zone--b {
+  right: 0;
+  border-right: none;
+  border-left: 1px dashed var(--border-strong);
+}
+
+.table__zone span {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.device {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2px;
+  overflow: hidden;
+  border: 1px solid var(--accent-ink);
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: var(--accent-ink);
+  cursor: grab;
+  touch-action: none;
+  transition: outline-color var(--dur-fast) var(--ease),
+    box-shadow var(--dur-fast) var(--ease);
+}
+
+.device:hover {
+  box-shadow: var(--shadow-1);
+}
+
+.device--dragging,
+.device--active {
+  cursor: grabbing;
+  outline: 2px solid var(--text);
+  outline-offset: 1px;
+}
+
+.device--selected {
+  outline: 2px solid var(--text);
+  outline-offset: 1px;
+}
+
+.device--error {
+  outline: 2px solid var(--danger);
+  outline-offset: 1px;
+}
+
+.device--warn {
+  outline: 2px solid var(--warn);
+  outline-offset: 1px;
+}
+
+.device:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+.device__name {
+  font-family: 'Archivo', system-ui, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.device__size {
+  font-size: 9px;
+  opacity: 0.75;
+}
+
+.device__remove {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  justify-content: center;
+  border: none;
+  border-radius: 3px;
+  background: var(--accent-ink);
+  color: var(--accent);
+  font-size: 10px;
+  line-height: 1;
+}
+
+.device__remove:hover {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--accent-ink) 80%, var(--accent));
+}
+
+.device__remove:focus-visible {
+  outline-color: var(--accent-ink);
+}
