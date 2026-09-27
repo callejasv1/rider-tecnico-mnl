@@ -133,7 +133,7 @@ Añadir `src/data/catalogo.test.ts`:
 - Toda dimensión `> 0`.
 - Ids únicos; categorías válidas.
 - Assert de valores esperados (tabla de referencia) para los equipos corregidos.
-- Equipos con `requiereCorriente: false` no exigen `enchufe`.
+- Todo equipo con `requiereCorriente: true` tiene `tipo` y `enchufe` definidos.
 
 Nota: las dimensiones son dato subjetivo-a-verificable; el test fija el valor
 acordado en este spec para detectar regresiones, no valida la realidad física.
