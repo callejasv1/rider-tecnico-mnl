@@ -143,6 +143,19 @@ acordado en este spec para detectar regresiones, no valida la realidad física.
 Se mantiene el logo y el amarillo de marca. Se reemplaza la estética por una
 nueva, con tokens y componentes consistentes. Todo en CSS plano (sin Tailwind).
 
+### 5.0 Skills de diseño (ya instaladas)
+
+- **Externa**: `anthropics/skills` → `frontend-design` (Apache 2.0), vendida en
+  `.opencode/skills/frontend-design/` con `LICENSE.txt` y `README.md` de
+  atribución. Guía la intención estética y prohíbe defaults generados.
+- **Local**: `.opencode/skills/mnl-design-system/SKILL.md`, con tokens, reglas de
+  estructura/interacción, piso de accesibilidad y reglas de copy.
+- Nota de dirección: `frontend-design` advierte que "near-black + un único acento
+  brillante", eyebrows en MAYÚSCULAS en cada título y meta-strings con "·" son
+  tells de diseño generado. El near-black + amarillo **está fijado por la marca**
+  (el brief gana), pero se evitan los otros tics: nada de eyebrows en cada
+  sección ni separadores "·" decorativos.
+
 ### 5.1 Tokens (`src/styles/tokens.css`)
 
 ```css
@@ -266,11 +279,15 @@ Reescritura de `src/pdf/RiderPdf.tsx`:
 - Footer con "Rider Técnico · Make Noise Lab" y paginación `x / y`.
 - Si no hay equipos, mensaje claro en vez de páginas vacías.
 
-## 9. Workstream 6 — Skill local de diseño (opcional, incluido)
+## 9. Workstream 6 — Skills de diseño
 
-- Crear `.opencode/skills/mnl-design-system/SKILL.md` con tokens, reglas de
-  componentes, accesibilidad y "cómo agregar una sección". Se redacta con la
-  skill `writing-skills` para que sea reutilizable.
+- **Externa (hecho)**: `frontend-design` de `anthropics/skills`, licencia Apache
+  2.0, vendida en `.opencode/skills/frontend-design/` (`SKILL.md`, `LICENSE.txt`,
+  `README.md` con atribución y fuente). No se edita; se actualiza desde upstream.
+- **Local (hecho)**: `.opencode/skills/mnl-design-system/SKILL.md`, skill de
+  referencia del sistema de diseño (tokens, estructura, interacción, a11y, copy).
+  Se irá ajustando durante el rediseño si cambian las decisiones visuales.
+- Cualquier skill nueva se redacta siguiendo `writing-skills`.
 
 ## 10. Verificación
 
@@ -290,7 +307,7 @@ Reescritura de `src/pdf/RiderPdf.tsx`:
 3. Canvas: snap, zoom, panel de equipo, teclado, validación en vivo (2).
 4. Tutorial: wizard + ayuda/glosario + ejemplo (3).
 5. PDF rediseñado (4).
-6. Skill de diseño + pulido/a11y + verificación (6 y 10).
+6. Pulido/a11y final + verificación (10).
 
 ## 12. Riesgos y mitigaciones
 
